@@ -1,17 +1,17 @@
 # Dii_Orderinfo
-Magento 1.x extension for sending order info to remote API
-*Disclaimer* This is a test extension and I would recommend that you **don't** use it in production environment without proper modifications. Always backup your code and DB.
-author: *Dimitar Ivanov*
+Magento 1.x extension for sending order info to remote API  
+**Disclaimer** This is a test extension and I would recommend that you **don't** use it in production environment without proper modifications. Always backup your code and DB.  
+author: *Dimitar Ivanov*  
 License: *OSL 3.0*
  
  
 ##### Table of Contents
 [Task](#task)  
-[Tested on](#tested-on)
-[Install](#install)
-[Uninstall](#uninstall)
-[Notes](#notes)
-[Used Tools](#used-tools)
+[Tested on](#tested-on)  
+[Install](#install)  
+[Uninstall](#uninstall)  
+[Notes](#notes)  
+[Used Tools](#used-tools)  
 
 ## Task
 
