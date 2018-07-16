@@ -27,7 +27,7 @@ class Dii_Orderinfo_Model_Api extends Varien_Object
         // Put here some fancy request options if you wish
         $client->setMethod(Zend_Http_Client::PUT);
         $client->setRawData(
-            json_encode($apiData),
+            Mage::helper('core')->jsonEncode($apiData),
             'application/json;charset=UTF-8'
         );
 
