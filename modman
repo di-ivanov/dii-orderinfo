@@ -1,0 +1,3 @@
+app/etc/modules/Dii_Orderinfo.xml								app/etc/modules/Dii_Orderinfo.xml
+app/code/community/Dii/Orderinfo/								app/code/community/Dii/Orderinfo/
+app/design/adminhtml/default/default/layout/dii_orderinfo.xml	app/design/adminhtml/default/default/layout/dii_orderinfo.xml

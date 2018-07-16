@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<layout>
+
+    <dii_update_sales_order_grid_handle>
+        <reference name="sales_order.grid">
+            <action method="addColumnAfter" ifconfig="orderinfo_options/configuration/enabled">
+                <columnId>api_sync</columnId>
+                <arguments helper="orderinfo/getApiSyncOrderGridArguments" />
+                <after>status</after>
+            </action>
+            <action method="addColumnAfter" ifconfig="orderinfo_options/configuration/enabled">
+                <columnId>api_sync_time</columnId>
+                <arguments helper="orderinfo/getApiSyncTimeOrderGridArguments" />
+                <after>api_sync</after>
+            </action>
+        </reference>
+    </dii_update_sales_order_grid_handle>
+
+    <adminhtml_sales_order_grid>
+        <update handle="dii_update_sales_order_grid_handle" />
+    </adminhtml_sales_order_grid>
+
+    <adminhtml_sales_order_index>
+        <update handle="dii_update_sales_order_grid_handle" />
+    </adminhtml_sales_order_index>
+
+</layout>

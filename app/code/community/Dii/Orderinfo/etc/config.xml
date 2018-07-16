@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<config>
+
+    <modules>
+        <Dii_Orderinfo>
+            <version>1.0.0</version>
+        </Dii_Orderinfo>
+    </modules>
+
+    <global>
+
+        <models>
+            <orderinfo>
+                <class>Dii_Orderinfo_Model</class>
+                <resourceModel>orderinfo_resource</resourceModel>
+            </orderinfo>
+            <orderinfo_resource>
+                <class>Dii_Orderinfo_Model_Resource</class>
+            </orderinfo_resource>
+        </models>
+
+        <resources>
+            <dii_orderinfo_setup>
+                <setup>
+                    <module>Dii_Orderinfo</module>
+                    <class>Dii_Orderinfo_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </dii_orderinfo_setup>
+        </resources>
+
+        <helpers>
+            <orderinfo>
+                <class>Dii_Orderinfo_Helper</class>
+            </orderinfo>
+        </helpers>
+
+        <events>
+            <sales_order_save_after>
+                <observers>
+                    <orderinfo>
+                        <type>model</type>
+                        <class>orderinfo/observer</class>
+                        <method>salesOrderSaveAfterApiNotify</method>
+                    </orderinfo>
+                </observers>
+            </sales_order_save_after>
+        </events>
+
+    </global>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <orderinfo>
+                    <file>dii_orderinfo.xml</file>
+                </orderinfo>
+            </updates>
+        </layout>
+    </adminhtml>
+
+</config>

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <dii translate="label" module="orderinfo">
+            <label>Dii</label>
+            <sort_order>1000</sort_order>
+        </dii>
+    </tabs>
+    <sections>
+        <orderinfo_options translate="label" module="orderinfo">
+            <label>Orderinfo</label>
+            <tab>dii</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <configuration translate="label" module="orderinfo">
+                    <label>Configuration</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled>
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <mode>
+                            <label>Mode</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>orderinfo/system_config_source_mode</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>required-entry</validate>
+                        </mode>
+                        <production_api>
+                            <label>API Production URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><mode>1</mode></depends>
+                            <validate>required-entry</validate>
+                        </production_api>
+                        <staging_api>
+                            <label>API Staging URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><mode>2</mode></depends>
+                            <validate>required-entry</validate>
+                        </staging_api>
+                        <development_api>
+                            <label>API Development URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><mode>3</mode></depends>
+                            <validate>required-entry</validate>
+                        </development_api>
+                    </fields>
+                </configuration>
+            </groups>
+        </orderinfo_options>
+    </sections>
+</config>
